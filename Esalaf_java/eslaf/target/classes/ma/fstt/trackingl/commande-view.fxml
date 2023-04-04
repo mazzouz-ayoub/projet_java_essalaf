@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="672.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.CreditController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <AnchorPane prefHeight="602.0" prefWidth="677.0">
+            <children>
+                <TextField fx:id="nom_produit" layoutX="28.0" layoutY="192.0" prefHeight="26.0" prefWidth="208.0" />
+                <Label layoutX="30.0" layoutY="167.0" text="ID produit :" />
+                <Label layoutX="30.0" layoutY="226.0" text="ID client :" />
+                <TextField fx:id="nom_client" layoutX="28.0" layoutY="252.0" prefHeight="26.0" prefWidth="208.0" />
+                <Label layoutX="30.0" layoutY="290.0" text="Date debut :" />
+                <TextField fx:id="datedebut" layoutX="28.0" layoutY="316.0" prefHeight="26.0" prefWidth="208.0" />
+                <Label layoutX="30.0" layoutY="353.0" text="montant" />
+                <TextField fx:id="montant" layoutX="28.0" layoutY="379.0" prefHeight="26.0" prefWidth="208.0" />
+
+                <Button fx:id="ok" layoutX="26.0" layoutY="438.0" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: #FFA07A;" text="Save" />
+                <Button fx:id="ook" layoutX="101.0" layoutY="438.0" mnemonicParsing="false" onAction="#onUpdateButtonClick" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: #FFA07A;" text="Edit" />
+                <Button fx:id="oook" layoutX="176.0" layoutY="438.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: #FFA07A;" text="Delete" />
+
+                <TableView fx:id="mytable" layoutX="288.0" layoutY="27.0" prefHeight="522.0" prefWidth="330.0">
+                    <columns>
+                        <TableColumn fx:id="col_id" prefWidth="64.0" text="id" />
+                        <TableColumn fx:id="col_produit" prefWidth="64.20001220703125" text="prod" />
+                        <TableColumn fx:id="col_client" prefWidth="64.0" text="liv" />
+                        <TableColumn fx:id="col_debut" prefWidth="64.0" text="date debut" />
+                        <TableColumn fx:id="col_mon" prefWidth="64.0" text="date fin" />
+
+                    </columns>
+                </TableView>
+                <Button fx:id="button" layoutX="20.0" layoutY="512.0" mnemonicParsing="false" onAction="#AfficherAccueil" text="Exit" />
+                <Label layoutX="14.0" layoutY="27.0" prefHeight="41.0" prefWidth="274.0" text="Gestion Des Credits" textFill="LIGHTSALMON">
+                    <font>
+                        <Font name="System Bold" size="26.0" />
+                    </font>
+                </Label>
+                <Button fx:id="search" layoutX="220.0" layoutY="114.0" mnemonicParsing="false" onAction="#onSearchButtonClick" style="-fx-background-color: #FFA07A;" text="OK" />
+                <TextField fx:id="nomm" layoutX="20.0" layoutY="113.0" prefHeight="26.0" prefWidth="189.0" promptText=" chercher credit " />
+            </children>
+        </AnchorPane>
+    </children>
+
+
+</VBox>
